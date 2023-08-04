@@ -137,6 +137,7 @@ export default class InnCardTesks {
       if (this.descriptionCard.value !== "") {
         const task = document.createElement("li");
         task.classList.add("task");
+        task.setAttribute('draggable', true);
         task.innerHTML = `
             <p>${this.descriptionCard.value}</p>
             <div class="close-task"></div>

@@ -23,7 +23,7 @@ export default class Controller {
         this.draggingProection = null;
       }
     
-      chengeCursor() {
+      changeCursor() {
         const board = document.querySelector(".board-tasks");
         this.draggingElement
           ? (board.style.cursor = "grabbing")
@@ -50,7 +50,7 @@ export default class Controller {
           }
         }
     
-        if (target.classList.contains("another") || target.tagNmae === "h2") {
+        if (target.classList.contains("another") || target.tagName === "h2") {
           const cardTasks = target.closest(".card-tasks");
           if (cardTasks) {
             proection.remove();
@@ -73,7 +73,7 @@ export default class Controller {
                      top: ${e.pageY - this.shiftY}px;
                 `;
           this.proectionAct(e);
-          this.chengeCursor();
+          this.changeCursor();
         }
       };
     
@@ -81,7 +81,7 @@ export default class Controller {
         if (this.draggingElement) {
           this.replaceDragging();
           this.clear();
-          this.chengeCursor();
+          this.changeCursor();
         }
       };
 
